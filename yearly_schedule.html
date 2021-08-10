@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YEARLY SCHEDULE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+          body{
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              overflow-x: hidden;
+              font-family: 'Lato', sans-serif;
+              background-image: url(back8.jpg);
+              background-position: center;
+              background-size: cover;
+              position: relative;
+          }
+
+          .offset::before{
+              display: block;
+              content: "";
+              height: 6rem;
+          }
+
+          .navbar{
+              text-transform: uppercase;
+              font-size: 14px;
+              font-weight: 700;
+              letter-spacing: 0.2rem;
+              background: rgba(0,0,0,0.6);
+              padding: 20px 0;
+              opacity: 0.7;
+          }
+
+          .navbar-dark .navbar-nav .nav-link{
+              color: #fff;
+              padding-left: 20px;
+          }
+
+          .navbar-dark .navbar-nav .nav-link.active,
+          .navbar-dark .navbar-nav .nav-link:hover{
+              color: #c49704;
+          }
+
+          .heading-content{
+              position: absolute;
+              top: 45%;
+              width: 100%;
+              max-width: 100%;
+          }
+
+          .heading-content h5{
+              font-size: 3em;
+              font-weight: 300;
+              color: #fff;
+              font-family: monospace;
+          }
+
+          .heading-content h1{
+              font-size: 5em;
+              font-weight: bolder;
+              color: #fff;
+              font-family: 'Montserrat', sans-serif;
+          }
+
+          .heading-content p{
+              font-size: 1em;
+              text-transform: uppercase;
+              font-weight: lighter;
+              color: #ccc;
+              word-spacing: 5px;
+              letter-spacing: 2px;
+          }
+          a{
+            color: #000;
+            text-decoration: none;
+            font-size: 15px;
+          }
+          a:hover{
+            text-decoration: none;
+          }
+          * {
+            box-sizing: border-box;
+          }
+          .row{
+            display: flex;
+            margin-left:5%;
+            margin-right: 5%;
+          }
+          .row h3{
+            font-family: 'Shadows Into Light', cursive;
+            color: #1a2729;
+          }
+          .row h5{
+            font-size: 15px;
+          }
+          .row p{
+            color: #594040;
+          }
+          .column {
+            float: left;
+          }
+          .left {
+            width: 25%;
+          }
+
+          .right {
+            width: 75%;
+          }
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          #contact{
+            background-image: url(back2.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+          }
+          .footer{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            padding-top: 70px;
+            background-image: url(back2.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+          }
+          .footer h4{
+            color: #000;
+            font-size: 20px;
+            font-weight: 300;
+            font-family: 'Shadows Into Light', cursive;
+          }
+          .row5{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 30px;
+          }
+          .col4{
+            margin-right: 5px;
+            margin-left: 5px;
+            flex: 25%;
+            background: transparent;
+          }
+          .footer h4{
+            font-size: 20px;
+            font-family: 'Shadows Into Light', cursive;
+            color: #000;
+            font-weight: bold;
+          }
+          .footer ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+            text-align: left;
+          }
+          .footer ul li a{
+            text-align: left;
+            color: #000;
+            text-decoration: none;
+            font-size: 15px;
+          }
+          .footer ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #4a462c;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+          }
+          .footer ul li:hover::after{
+            width: 100%;
+          }
+          #button{
+            background-image: url(but6.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            border-radius: 50%;
+            width: 30%;
+            height: 50%;
+            color: #4f3d15;
+          }
+          @media only screen and (max-width: 1000px) {
+            vedio{
+              width: 20%;
+              height: 20%;
+              margin-top: 5%;
+              margin-bottom: 5%;
+            }
+            .row{
+              flex-wrap: wrap;
+            }
+            .left{
+              width: 100%;
+              padding-bottom: 10px;
+              float: none;
+            }
+           .right{
+              width: 100%;
+              padding-bottom: 10px;
+              float: none;
+            }
+            .row5{
+              flex-wrap: wrap;
+            }
+            .footer ul li{
+              list-style: none;
+              display: inline-block;
+              padding: 3px 5px;
+              position: relative;
+              text-align: left;
+            }
+            .footer h4{
+              color: #000;
+            }
+            .footer ul li a{
+              color: #000;
+              text-decoration: none;
+              font-size: 15px;
+              text-align: center;
+            }
+            #button{
+              background-image: url(but6.png);
+              background-position: center;
+              background-size: cover;
+              position: relative;
+              border: none;
+              color: white;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 12px;
+              border-radius: 50%;
+              width: 60%;
+              height: 50%;
+              color: #4f3d15;
+            }
+            a img{
+              width: 100%;
+            }
+          }
+        </style>
+
+    </head>
+    <body data-spy="scroll" data-target="#navbarResponsive">
+        <div id="home">
+            <!-----------------------Navigation Starts----------------------->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target= "#navbarResponsive" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                      <a href="index.html">
+                        <video autoplay loop muted width="70" height="70">
+                           <source src="logo1.mp4" type="video/mp4">
+                        </video>
+                      </a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#march" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">MARCH 2022</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#april" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">APRIL 2022</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#may" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">MAY 2022</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#june" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">JUNE 2022</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#july" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">JULY 2022</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#august" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">AUGUST 2022</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#september" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">SEPTEMBER 2022</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            <!-----------------------Navigation Ends----------------------->
+            <!-----------------------March Starts----------------------->
+            <div id="march">
+              <br><br><br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="1.jpg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>WISHDOM OF BREATH</h3>
+                  <h5 style="color: #7d6c3e;">SELF EXPLORATION THROUGH THE WISDOM OF BREATH</h5>
+                  <h5 style="font-weight: bold; color: #403312;">MARCH 1, 2022 - MARCH 3, 2022</h5>
+                  <p>
+                    The Wisdom of Breath is an invitation to reconnect with our most precious
+                    and prosaic resource – the breath. Combining gentle, deep-breathing sessions with
+                    active meditations the group creates a space to explore and release suppressed
+                    emotions and painful beliefs, making way for wholeness and self acceptance.
+                  </p>
+                  <a href="wishdom.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="self4.jpeg" style="height: 250px; width: 270px;">
+                </div>
+                <div class="column right">
+                  <h3>SELF MYOFASCIAL RELEASE AND YIN YOGA</h3>
+                  <h5 style="font-weight: bold; color: #403312;">MARCH 5, 2022 - MARCH 7, 2022</h5>
+                  <p>
+                    Releasing tension held in the fascia can increase mobility and
+                    alleviate pain by relaxing muscles, increasing circulation, and
+                    encouraging a deep relaxation of mind, body, and spirit.
+                  </p>
+                  <a href="self.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="gal11.jpg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>BODY CLEANSE</h3>
+                  <h5 style="color: #7d6c3e;">HEALTH,VITALITY,RADIANCE</h5>
+                  <h5 style="font-weight: bold; color: #403312;">MARCH 8, 2022 - MARCH 13, 2022</h5>
+                  <p>
+                    The Body Cleanse is a powerful process of detoxification designed to
+                    flush out toxins from the digestive system and restore its natural
+                    state of wellness and balance. The five-day process combines juice
+                    fasting and hydrocolonics with meditation, movement arts and sharing
+                    circles to support deep purification, on both a physical and
+                    metaphysical level.
+                  </p>
+                  <a href="detox.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="sy.jpeg" style="height: 250px; width: 270px;">
+                </div>
+                <div class="column right">
+                  <h3>SYNERGISTICS</h3>
+                  <h5 style="font-weight: bold; color: #403312;">MARCH 14, 2022 - MARCH 18, 2022</h5>
+                  <p>
+                    Using a repertoire of Yoga,  Gyrokinesis and Chi Gong to enhance
+                    our focus and awareness to move with economy of energy, increase range
+                    of motion and functionality and improve our practice, each one at their
+                    own level whether beginners or advanced practitioners.
+                  </p>
+                  <a href="sy.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="herbal.jpeg" style="height: 250px; width: 270px;">
+                </div>
+                <div class="column right">
+                  <h3>HERBAL PURIFICATION</h3>
+                  <h5 style="color: #7d6c3e;">THE HEALING POWER OF THE NATURAL WORLD</h5>
+                  <h5 style="font-weight: bold; color: #403312;">MARCH 16, 2022 - MARCH 16, 2022</h5>
+                  <p>
+                    Through a carefully designed program including movement, embodiment,
+                    involve with medicinal herbs and plants, along with organic smoothies
+                    and juices, a profound rejuvenation can occur. Participants are invited
+                    to experience microdoses of power plants through homegrown tinctures.
+                    Reconnect with the body and experience natural healing.
+                  </p>
+                  <a href="herbal.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="women1.jpeg" style="height: 250px; width: 270px;">
+                </div>
+                <div class="column right">
+                  <h3>WOMEN CEREMONY</h3>
+                  <h5 style="font-weight: bold; color: #403312;">MARCH 18, 2022 - MARCH 23, 2022</h5>
+                  <p>
+                    An all-night medicinal ceremony with the energies of the moon, the forest, and the feminine.
+                  </p>
+                  <a href="women.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="beauty1.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>THE BEAUTY THAT SURROUNDS YOU</h3>
+                  <h5 style="color: #7d6c3e;">SISTERHOOD RISISNG TO THE MOON AND BACK</h5>
+                  <h5 style="font-weight: bold; color: #403312;">MARCH 22, 2022 - MARCH 25, 2022</h5>
+                  <p>
+                    An introduction to the many practices that can bring healing joy
+                    inspiration with moments of touching deep spaces of presence and
+                    clarity. 4 days by the river, with the sacred elements of fire, water,
+                    air, and earth, meeting the wisdom of sisterhood and the feminine
+                    energies.
+                  </p>
+                  <a href="beauty.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="rock1.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>ROCK ODYSSEY</h3>
+                  <h5 style="color: #7d6c3e;">WITH MOKSHAM DJ ARTIST</h5>
+                  <h5 style="font-weight: bold; color: #403312;">MARCH 27, 2022 - MARCH 29, 2022</h5>
+                  <p>
+                    The Rock Odyssey is an invitation to travel on the wings of music in an
+                    all-night mystical journey. Our Moksham DJ artist weaves together musical
+                    masterpieces of all genres and eras to create a rich tapestry of sound,
+                    uniting the community in reflection, dance and prayer.
+                  </p>
+                  <a href="rock.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+            </div>
+            <!-----------------------March Ends----------------------->
+            <!-----------------------April Starts----------------------->
+            <div id="april">
+              <br><br><br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="white1.jpeg" style="height: 250px; width: 270px;">
+                </div>
+                <div class="column right">
+                  <h3>WHITE NIGHT</h3>
+                  <h5 style="font-weight: bold; color: #403312;">APRIL 2, 2022 - APRIL 3, 2022</h5>
+                  <p>
+                    This musical ceremony of love and gratitude, which honors the medicine
+                    of the forest, is an opportunity to let go into a sacred journey of
+                    healing embraced by a supportive community.
+                  </p>
+                  <a href="white_night.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="vip1.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>VIPASSANA</h3>
+                  <h5 style="font-weight: bold; color: #403312;">APRIL 12, 2022 - APRIL 15, 2022</h5>
+                  <p>
+                    An all-embracing awareness arises from within and takes over when one
+                    sits silently and does nothing; no effort, no choice, no doing - just
+                    being.
+                  </p>
+                  <a href="vipassana.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="silent.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>SILENT RETREAT</h3>
+                  <h5 style="color: #7d6c3e;">THE LANGUAGE OF THE SOUL</h5>
+                  <h5 style="font-weight: bold; color: #403312;">APRIL 15, 2022 - APRIL 22, 2022</h5>
+                  <p>
+                    A Silence Retreat is a rare and precious opportunity to focus solely on
+                    the most earnest questions of the heart and to spend some days in
+                    silence, in a beautiful, natural setting.
+                  </p>
+                  <a href="silent.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="rock1.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>ROCK ODYSSEY</h3>
+                  <h5 style="color: #7d6c3e;">WITH MOKSHAM DJ ARTIST</h5>
+                  <h5 style="font-weight: bold; color: #403312;">APRIL 28, 2021 - APRIL 29, 2021</h5>
+                  <p>
+                    The Rock Odyssey is an invitation to travel on the wings of music in an
+                    all-night mystical journey. Our Moksham DJ artist weaves together musical
+                    masterpieces of all genres and eras to create a rich tapestry of sound,
+                    uniting the community in reflection, dance and prayer.
+                  </p>
+                  <a href="rock.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+            </div>
+            <!-----------------------April Ends----------------------->
+            <!-----------------------May Starts----------------------->
+            <div id="may">
+              <br><br><br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="res5.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>RESTORATIVE YOGA AND MEDITATION TRAINING</h3>
+                  <h5 style="color: #7d6c3e;">100 HOUR TRAINING</h5>
+                  <h5 style="font-weight: bold; color: #403312;">MAY 3, 2022 - MAY 14, 2022</h5>
+                  <p>
+                    This training is based upon the path of self-inquiry. The exploration
+                    of conditionings and habits, to allow aspects of oneself to be revealed.
+                    It will support the peeling of layers of personality, to reveal one’s true essence.
+                  </p>
+                  <a href="resyoga.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="17.jpg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>BODY CLEANSE</h3>
+                  <h5 style="color: #7d6c3e;">HEALTH,VITALITY,RADIANCE</h5>
+                  <h5 style="font-weight: bold; color: #403312;">MAY 18, 2022 - MAY 23, 2022</h5>
+                  <p>
+                    The Body Cleanse is a powerful process of detoxification designed to
+                    flush out toxins from the digestive system and restore its natural
+                    state of wellness and balance. The five-day process combines juice
+                    fasting and hydrocolonics with meditation, movement arts and sharing
+                    circles to support deep purification, on both a physical and metaphysical
+                    level.
+                  </p>
+                  <a href="detox.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+            </div>
+            <!-----------------------May Ends----------------------->
+            <!-----------------------June Starts----------------------->
+            <div id="june">
+              <br><br><br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="17.jpg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>BODY CLEANSE</h3>
+                  <h5 style="color: #7d6c3e;">HEALTH,VITALITY,RADIANCE</h5>
+                  <h5 style="font-weight: bold; color: #403312;">JUNE 8, 2022 - JUNE 13, 2022</h5>
+                  <p>
+                    The Body Cleanse is a powerful process of detoxification designed to
+                    flush out toxins from the digestive system and restore its natural
+                    state of wellness and balance. The five-day process combines juice
+                    fasting and hydrocolonics with meditation, movement arts and sharing
+                    circles to support deep purification, on both a physical and
+                    metaphysical level.
+                  </p>
+                  <a href="detox.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="soul1.jpeg" style="height: 250px; width: 300px;">
+                </div>
+                <div class="column right">
+                  <h3>SOUL VOICE</h3>
+                  <h5 style="font-weight: bold; color: #403312;">JUNE 16, 2022 - JUNE 18, 2022</h5>
+                  <p>
+                    Welcome all music lovers and those who wish to come in deeper contact
+                    with their voice in a safe and loving atmosphere.
+                  </p>
+                  <a href="soul.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="soul4.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>THREE-DAY VINYASA YOGA INTENSIVE</h3>
+                  <h5 style="color: #7d6c3e;">EFFORTLESS EFFORT IN YOGA ASANA</h5>
+                  <h5 style="font-weight: bold; color: #403312;">JUNE 24, 2022 - JUNE 26, 2022</h5>
+                  <p>
+                    This Yoga group offers a taste of the yoga language developed by
+                    renowned teacher K.Pattabhi Jois. Vinyasa Yoga emphasizes precision in
+                    the asana using props, accurate sequences and timings to cultivate
+                    respect for the body and eliminate physical injuries.
+                  </p>
+                  <a href="vin.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="move1.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>MOVING IN</h3>
+                  <h5 style="color: #7d6c3e;">IT ALL BEGINS IN THE BODY.</h5>
+                  <h5 style="font-weight: bold; color: #403312;">JUNE 30, 2022 - JUNE 30, 2022</h5>
+                  <p>
+                    This day event is about learning to trust of one’s being.
+                    Through the use of body awareness, breathing, movement and dance, the
+                    life force constantly moving inside can be drawn on to come back home.
+                    No previous dance experience is required for this workshop. All one
+                    needs is willingness, curiosity, and a desire to move and be moved.
+                  </p>
+                  <a href="movingin.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+            </div>
+            <!-----------------------June Ends----------------------->
+            <!-----------------------July Starts----------------------->
+            <div id="july">
+              <br><br><br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="rock1.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>ROCK ODYSSEY</h3>
+                  <h5 style="color: #7d6c3e;">WITH MOKSHAM DJ ARTIST</h5>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 3, 2022 - JULY 5, 2022</h5>
+                  <p>
+                    The Rock Odyssey is an invitation to travel on the wings of music
+                    in an all-night mystical journey. DJ Tyohar weaves together musical
+                    masterpieces of all genres and eras to create a rich tapestry of sound,
+                    uniting the community in reflection, dance and prayer.
+                  </p>
+                  <a href="rock.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="power1.jpeg" style="height: 250px; width: 260px;">
+                </div>
+                <div class="column right">
+                  <h3>THE POWER OF GENTELNESS</h3>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 7, 2022 - JULY 9, 2022</h5>
+                  <p>
+                    This 3 day workshop explores the quality of gentleness towards
+                    oneself and others through Yin & Restorative Yoga, Yoga Nidra, and
+                    Meditation.
+                  </p>
+                  <a href="power.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="good2.jpeg" style="height: 250px; width: 260px;">
+                </div>
+                <div class="column right">
+                  <h3>IT'S GOOD FOR YOU</h3>
+                  <h5 style="color: #7d6c3e;">HIGH VIBE NUTRITION</h5>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 9, 2022 - JULY 11, 2022</h5>
+                  <p>
+                    In this three-days workshop, participants receive cutting-edge
+                    nutritional advice on how to upgrade eating habits, stay energized
+                    and focused throughout the day and maintain a clean body after the
+                    Cleanse. This class is for anyone who is looking to upgrade their
+                    kitchen with superfoods and high-vibe dishes as well as suggestions
+                    for alternatives to unhealthy foods that might be harming their health.
+                  </p>
+                  <a href="good.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="free1.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>FREEDOM FROM PAST</h3>
+                  <h5 style="color: #7d6c3e;">PRIMAL FEELINGS THERAPY</h5>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 13, 2022 - JULY 16, 2022</h5>
+                  <p>
+                    The Freedom from the Past group focuses on creating a safe vessel in
+                    which to explore unexpressed emotions, ultimately releasing them and
+                    freeing the emotional body from their stranglehold. When the longing
+                    to be free is greater than the fear of pain, an openness can be found
+                    to discover and let go of one’s deepest beliefs, patterns and
+                    conditionings.
+                  </p>
+                  <a href="freedom.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="tipi1.jpeg" style="height: 250px; width: 260px;">
+                </div>
+                <div class="column right">
+                  <h3>TIPI CEREMONY</h3>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 14, 2022 - JULY 16, 2022</h5>
+                  <p>
+                    This medicine is innocent. It is precious. It is family, and a friend
+                    to all of us. It is a gentle flower of this creation.
+                  </p>
+                  <a href="tipi.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="silent.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>SILENT RETREAT</h3>
+                  <h5 style="color: #7d6c3e;">THE LANGUAGE OF THE SOUL</h5>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 24, 2022 - JULY 30, 2022</h5>
+                  <p>
+                    A Silence Retreat is a rare and precious opportunity to focus solely
+                    on the most earnest questions of the heart and to spend some days in
+                    silence, in a beautiful, natural setting.
+                  </p>
+                  <a href="silent.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+            </div>
+            <!-----------------------July Ends----------------------->
+            <!-----------------------August Starts----------------------->
+            <div id="august">
+              <br><br><br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="res5.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>RESTORATIVE YOGA AND SELF EXPLORATION TRAINING</h3>
+                  <h5 style="color: #7d6c3e;">100 HOUR TRAINING</h5>
+                  <h5 style="font-weight: bold; color: #403312;">AUGUST 2, 2022 - AUGUST 15, 2022</h5>
+                  <p>
+                    This training is based upon the path of self-inquiry. The exploration
+                    of conditionings and habits, to allow aspects of oneself to be revealed.
+                    It will support the peeling of layers of personality, to reveal one’s
+                    true essence.
+                  </p>
+                  <a href="resyoga.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="magic1.jpeg" style="height: 250px; width: 270px;">
+                </div>
+                <div class="column right">
+                  <h3>MAGIC OF TANTRA</h3>
+                  <h5 style="color: #7d6c3e;">EMOTIONAL WISDOM & SACRED INTIMACY(ONLY FOR COUPLES)</h5>
+                  <h5 style="font-weight: bold; color: #403312;">AUGUST 18, 2022 - AUGUST 27, 2022</h5>
+                  <p>
+                    Using a wide range of techniques, from ancient to modern traditions, this workshop will
+                    bring awareness and healing into patterns of communication and relating and into the personal
+                    and societal conditioning around sexuality. This allows one's physical, sexual, and emotional
+                    intimacy to become more sensual, vibrant and enjoyable, healing, empowering, deeply nourishing, and sacred.
+                  </p>
+                  <a href="magic.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+            </div>
+            <!-----------------------August Ends----------------------->
+            <!-----------------------September Starts----------------------->
+            <div id="september">
+              <br><br><br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="movenature1.jpeg" style="height: 250px; width: 270px;">
+                </div>
+                <div class="column right">
+                  <h3>MOVING WITH NATURE</h3>
+                  <h5 style="color: #7d6c3e;">EXPLORING THE ELEMENTS THROUGH YOGA, DANCE, AND RITUAL.</h5>
+                  <h5 style="font-weight: bold; color: #403312;">SEPTEMBER 1, 2022 - SEPTEMBER 5, 2022</h5>
+                  <p>
+                    The expansion of the body continually reveals new layers of emotional
+                    energy, patterns of mind, and ultimately its luminous essence. This
+                    gentle approach to yoga provides a sacred container to rest in
+                    presence and meet whatever arises, shedding layers of contraction and
+                    attachment, and embracing the simplicity of the moment.
+                  </p>
+                  <a href="movingwithnature.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="vip1.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>VIPASSANA</h3>
+                  <h5 style="font-weight: bold; color: #403312;">SEPTEMBER 10, 2022 - SEPTEMBER 20, 2022</h5>
+                  <p>
+                    An all-embracing awareness arises from within and takes over when one
+                    sits silently and does nothing; no effort, no choice, no doing - just
+                    being.
+                  </p>
+                  <a href="vipassana.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="forestball1.jpeg" style="height: 270px; width: 270px;">
+                </div>
+                <div class="column right">
+                  <h3>FOREST BALL</h3>
+                  <h5 style="font-weight: bold; color: #403312;">SEPTEMBER 25, 2022 - SEPTEMBER 27, 2022</h5>
+                  <p>
+                    Traveling on the golden era of hippy culture that came into flowering in the 60's and 70's,
+                    when the winds of peace & love were blowing. Musical masterpieces to be cherished and enjoyed
+                    in the magical forest setting by the river. The way this music was meant to be listened to.
+                  </p>
+                  <a href="forestball.html">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+            </div>
+            <!-----------------------September Ends----------------------->
+
+        <!-----------------------Contact Starts----------------------->
+        <br><br><br><br><br>
+        <div id="contact" class="offset container w- 50 mx-auto mt-3 pb-5" >
+            <div class="post-heading text-center">
+                <h3 class="display-4 font-weight-bold">Contact Us</h3>
+                <hr class="w-50 mx-auto pb-5">
+            </div>
+            <form class="form-horizontal" action="user_input.php" method="POST">
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="subscriber_name"><b>Full Name:</b></label>
+                    <input type="text" name="subscriber_name" class="form-control" id="fname" placeholder="Enter fullname">
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="subscriber_email"><b>Email:</b></label>
+                      <input type="email" name="subscriber_email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="subscriber_message"><b>Your Message:</b></label>
+                    <textarea class="form-control" name="subscriber_message"></textarea>
+                </div>
+                <br><br>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-dark" style="background-color: #000;">&nbsp &nbsp &nbsp SEND &nbsp &nbsp &nbsp</button>
+                      </div>
+                    </div>
+                  </form>
+                  <br><br>
+            </div>
+            <br><br>
+            <!-----------------------Contact Ends----------------------->
+            <!-----------------------Footer Starts----------------------->
+            <footer class="footer">
+              <div class="row5">
+                <div class="col4">
+                  <h4>ABOUT MOKSHAM</h4>
+                  <br>
+                  <ul>
+                    <li><a href="about_moksham.html">About Moksham</a></li><br>
+                    <li><a href="community.html">Community</a></li><br>
+                    <li><a href="healthy.html">Healthy Eating</a></li><br>
+                    <li><a href="eco_village.html">Eco Village</a></li><br>
+                    <li><a href="silent.html">Silent Retreats</a></li><br>
+                  </ul>
+                </div>
+                <div class="col4">
+                  <h4>GROUPS AND EVENTS</h4>
+                  <br>
+                  <ul>
+                    <li><a href="yearly_schedule.html">Schedule 2021</a></li><br>
+                    <li><a href="holistic.html">Body Workshops</a></li><br>
+                  </ul>
+                </div>
+                <div class="col4">
+                  <h4>VISITING MOKSHAM</h4>
+                  <ul>
+                    <li><a href="accomodation.html">Accomodation & Prices</a></li><br>
+                    <li><a href="workexchange.html">Long Term Stay- WorkExchange Program</a></li><br>
+                    <li><a href="faq.html">FAQ</a></li><br>
+                    <li><a href="directions.html">How to Get Here</a></li><br>
+                    <li><a href="contact.html">Booking</a></li><br>
+                    <li><a href="cancle.html">Cancellation Policy</a></li><br>
+                    <li><a href="testimonial.html">Testimonials</a></li><br>
+                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=enquiry@moksham.co.in&su=SUBJECT&body=BODY&bcc=enquiry@moksham.co.in">Contact Us: enquiry@moksham.co.in</a></li><br><br>
+                  </ul>
+                </div>
+                <div class="col4">
+                  <br>
+                  <ul>
+                    <a href="contact.html"><button id="button"><b>CONTACT<br>US<b></button></a>
+                    <br><br><br>
+                    <a href="https://www.facebook.com/profile.php?id=100070487028921"><img src="fb.png" style="width: 17%;"></a>
+                    <a href="https://www.instagram.com/moksham_ecovillage/"><img src="insta.png" style="width: 15%;"></a>
+                  </ul>
+                </div>
+                </div>
+              </div>
+            </footer>
+        <!-----------------------Footer Ends----------------------->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </body>
+</html>

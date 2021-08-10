@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Monthly Schedule</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+          body{
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              overflow-x: hidden;
+              font-family: 'Lato', sans-serif;
+              background-image: url(back8.jpg);
+              background-position: center;
+              background-size: cover;
+              position: relative;
+          }
+
+          .offset::before{
+              display: block;
+              content: "";
+              height: 6rem;
+          }
+
+          .navbar{
+              text-transform: uppercase;
+              font-size: 14px;
+              font-weight: 700;
+              letter-spacing: 0.2rem;
+              background: rgba(0,0,0,0.6);
+              padding: 20px 0;
+              opacity: 0.7;
+          }
+
+          .navbar-dark .navbar-nav .nav-link{
+              color: #fff;
+              padding-left: 20px;
+          }
+
+          .navbar-dark .navbar-nav .nav-link.active,
+          .navbar-dark .navbar-nav .nav-link:hover{
+              color: #1ebba3;
+          }
+
+          .heading-content{
+              position: absolute;
+              top: 45%;
+              width: 100%;
+              max-width: 100%;
+          }
+
+          .heading-content h5{
+              font-size: 3em;
+              font-weight: 300;
+              color: #fff;
+              font-family: monospace;
+          }
+
+          .heading-content h1{
+              font-size: 5em;
+              font-weight: bolder;
+              color: #fff;
+              font-family: 'Montserrat', sans-serif;
+          }
+
+          .heading-content p{
+              font-size: 1em;
+              text-transform: uppercase;
+              font-weight: lighter;
+              color: #ccc;
+              word-spacing: 5px;
+              letter-spacing: 2px;
+          }
+          a{
+            color: #000;
+            text-decoration: none;
+            font-size: 15px;
+          }
+          a:hover{
+            text-decoration: none;
+          }
+          * {
+            box-sizing: border-box;
+          }
+          .row{
+            margin-left:5%;
+            margin-right: 5%;
+          }
+          .row h3{
+            font-family: 'Shadows Into Light', cursive;
+            color: #2c7696;
+          }
+          .row h5{
+            font-size: 15px;
+          }
+          .row p{
+            color: #594040;
+          }
+          .column {
+            float: left;
+          }
+          .left {
+            width: 25%;
+          }
+
+          .right {
+            width: 75%;
+          }
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          #contact{
+            background-image: url(back3.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+          }
+          .footer{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            padding-top: 70px;
+            background-image: url(back2.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+          }
+          .footer h4{
+            color: #403c3c;
+            font-size: 20px;
+            font-weight: 300;
+            font-family: 'Shadows Into Light', cursive;
+          }
+          .row5{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 30px;
+          }
+          .col5{
+            margin-right: 5px;
+            margin-left: 5px;
+            flex: 25%;
+            background: transparent;
+          }
+          .footer h4{
+            font-size: 20px;
+            font-family: 'Shadows Into Light', cursive;
+            color: #403c3c;
+          }
+          .footer ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+            text-align: left;
+          }
+          .footer ul li a{
+            color: #403c3c;
+            text-decoration: none;
+            font-size: 15px;
+          }
+          .footer ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #754df7;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+          }
+          .footer ul li:hover::after{
+            width: 100%;
+          }
+          @media only screen and (max-width: 1000px) {
+            .row5{
+              flex-wrap: wrap;
+            }
+            .footer ul li{
+              list-style: none;
+              display: inline-block;
+              padding: 3px 5px;
+              position: relative;
+              text-align: left;
+            }
+            .footer ul li a{
+              color: #000;
+              text-decoration: none;
+              font-size: 15px;
+            }
+          }
+        </style>
+
+    </head>
+    <body data-spy="scroll" data-target="#navbarResponsive">
+        <div id="home">
+            <!-----------------------Navigation Starts----------------------->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target= "#navbarResponsive" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                      <a href="index.html">
+                        <video autoplay loop muted width="50" height="50">
+                           <source src="logo1.mp4" type="video/mp4">
+                        </video>
+                      </a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#june" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">JUNE 2021</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#july" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">JULY 2021</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#august" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">AUGUST 2021</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#november" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">NOVEMBER 2021</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#december" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">DECEMBER 2021</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#january" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">JANUARY 2022</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#february" style="font-family: 'Shadows Into Light', cursive; font-size: 20px;">FEBRUARY 2022</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            <!-----------------------Navigation Ends----------------------->
+            <!-----------------------July Starts----------------------->
+            <div id="july">
+              <br><br><br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="9.jpg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>WHITE NIGHT</h3>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 2, 2021 - JUNE 3, 2021</h5>
+                  <p>
+                    This musical ceremony of love and gratitude, which honors the medicine
+                    of the Amazon, is an opportunity to let go into a sacred journey of
+                    healing embraced by a supportive community.
+                  </p>
+                  <a href="#">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="10.jpg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>IYENGAR YOGA RETREAT</h3>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 7, 2021 - JULY 14, 2021</h5>
+                  <p>
+                    For many, Iyengar’s language of yoga is a gateway into the ancient
+                    art-form. Its creative use of props combined with Vaya’s meditative
+                    approach to yoga allows the asana to be embodied fully and deeply
+                    transcending the limitations of physical and mental flexibility.
+                  </p>
+                  <a href="#">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="11.jpg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>PRAYER MEETING WITH KUAUHTLI</h3>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 9, 2021 - JULY 10, 2021</h5>
+                  <p>
+                    An all night journey honoring the desert medicine of the Shining Heart,
+                    connecting with the ancient Mexica traditions and ways of this
+                    continent in holy communion with the sacred fire and elements of life.
+                    A deep prayer from the heart of the PachaMama family to All of Our
+                    Relations.
+                  </p>
+                  <a href="#">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="12.jpg" style="height: 250px; width: 320px;">
+                </div>
+                <div class="column right">
+                  <h3>VIPASSANA</h3>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 12, 2021 - JULY 15, 2021</h5>
+                  <p>
+                    An all-embracing awareness arises from within and takes over when one
+                    sits silently and does nothing; no effort, no choice, no doing - just
+                    being.
+                  </p>
+                  <a href="#">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="13.jpg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>SILENT RETREAT</h3>
+                  <h5 style="color: #7d6c3e;">THE LANGUAGE OF THE SOUL</h5>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 15, 2021 - JULY 22, 2021</h5>
+                  <p>
+                    A Silence Retreat is a rare and precious opportunity to focus solely on
+                    the most earnest questions of the heart and to spend some days in
+                    silence, in a beautiful, natural setting.
+                  </p>
+                  <a href="#">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="14.jpeg" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>FINDING INNER BALANCE</h3>
+                  <h5 style="color: #7d6c3e;">HEALTHY FLOW IN DAILY LIFE</h5>
+                  <h5 style="font-weight: bold; color: #403312;">JULY 26, 2021 - JULY 28, 2021</h5>
+                  <p>
+                    This workshop will present simple and hands-on tools to maintain
+                    balance within the nervous system and evolve the sub-concise brain
+                    (operation system). By bringing harmony to the nervous system, one can
+                    enjoy the interaction with and the creativity of modern life, while
+                    remaining resilient, centered, and energized.
+                  </p>
+                  <a href="#">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+              <div class="row"  style="background-image: url(back2.jpg);
+                          background-position: center;
+                          background-size: cover;
+                          position: relative;">
+                <div class="column left">
+                  <img src="15.png" style="height: 250px; width: 250px;">
+                </div>
+                <div class="column right">
+                  <h3>ROCK ODYSSEY</h3>
+                  <h5 style="color: #7d6c3e;">WITH DJ TYOHAR</h5>
+                  <h5 style="font-weight: bold; color: #403312;">JUNE 21, 2021 - JUNE 23, 2021</h5>
+                  <p>
+                    The Rock Odyssey is an invitation to travel on the wings of music in an
+                    all-night mystical journey. DJ Tyohar weaves together musical
+                    masterpieces of all genres and eras to create a rich tapestry of sound,
+                    uniting the community in reflection, dance and prayer.
+                  </p>
+                  <a href="#">Find out more</a>
+                </div>
+              </div>
+              <br><br>
+            </div>
+            <!-----------------------July Ends----------------------->
+
+        <!-----------------------Contact Starts----------------------->
+        <br><br><br><br><br>
+        <div id="contact" class="offset container w- 50 mx-auto mt-3 pb-5" >
+            <div class="post-heading text-center">
+                <h3 class="display-4 font-weight-bold">Contact Us</h3>
+                <hr class="w-50 mx-auto pb-5">
+            </div>
+            <form class="form-horizontal" action="user_input.php" method="POST">
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="subscriber_name">Full Name:</label>
+                    <input type="text" name="subscriber_name" class="form-control" id="fname" placeholder="Enter fullname">
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="subscriber_email">Email:</label>
+                      <input type="email" name="subscriber_email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="subscriber_message">Your Message:</label>
+                    <textarea class="form-control" name="subscriber_message"></textarea>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-dark">Send</button>
+                      </div>
+                    </div>
+                  </form>
+                  <br><br>
+            </div>
+            <br><br>
+            <!-----------------------Contact Ends----------------------->
+            <!-----------------------Footer Starts----------------------->
+            <footer class="footer">
+              <div class="row5">
+                <div class="col5">
+                  <h4>ABOUT MOKSHAM</h4>
+                  <br>
+                  <ul>
+                    <li><a href="">About Moksham</a></li><br>
+                    <li><a href="">Community</a></li><br>
+                    <li><a href="">Visiting Children</a></li><br>
+                    <li><a href="">Healthy Eating</a></li><br>
+                    <li><a href="">Eco Village</a></li><br>
+                    <li><a href="">Tyohar</a></li><br>
+                    <li><a href="">Silent Retreats</a></li><br>
+                    <li><a href="">Satsang Vedios</a></li><br>
+                    <li><a href="">Blog</a></li><br>
+                  </ul>
+                </div>
+                <div class="col5">
+                  <h4>GROUPS AND EVENTS</h4>
+                  <br>
+                  <ul>
+                    <li><a href="">Schedule 2021</a></li><br>
+                    <li><a href="">Retreats</a></li><br>
+                    <li><a href="">Therapists</a></li><br>
+                    <li><a href="">Meditation</a></li><br>
+                    <li><a href="">Transformation Cycle</a></li><br>
+                    <li><a href="">Body Cleanses and Detox</a></li><br>
+                    <li><a href="">Yoga</a></li><br>
+                    <li><a href="">Emotional Healing Workshops</a></li><br>
+                    <li><a href="">Red Road</a></li><br>
+                  </ul>
+                </div>
+                <div class="col5">
+                  <h4>VISITING MOKSHAM</h4>
+                  <ul>
+                    <li><a href="">Accomodation & Prices</a></li><br>
+                    <li><a href="">Short/Long Term Stay: Work Exchange Program</a></li><br>
+                    <li><a href="">FAQ</a></li><br>
+                    <li><a href="">How to Get Here</a></li><br>
+                    <li><a href="">Booking</a></li><br>
+                    <li><a href="">Cancellation Policy</a></li><br>
+                    <li><a href="">Testimonials</a></li><br>
+                    <li><a href="">Contact Us: info@moksham.com</a></li><br>
+                    <li><a href="">Red Road</a></li><br>
+                  </ul>
+                </div>
+                </div>
+                <div class="col5">
+                  <br>
+                  <ul>
+                    <i class="fa fa-twitter-square" style="font-size:36px"></i>
+                    <i class="fa fa-facebook-square" style="font-size:36px"></i>
+                    <i class="fa fa-instagram" style="font-size:36px"></i>
+                    <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+                    <br><br><br>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+        <!-----------------------Footer Ends----------------------->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="with=device-width, initial scale=1.0">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <title>VISITING YOUTH PROGRAMS</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    .level{
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+    .body{
+      background-image: url('back2.jpg');
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+    .body h2{
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .body h5{
+      margin-top: 1%;
+      font-size:28px;
+      font-weight: bolder;
+      text-align: center;
+      color: #595c61;
+      font-family: 'Shadows Into Light', cursive;
+    }
+    em{
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .row1 h5{
+      font-family: 'Shadows Into Light', cursive;
+      color: #ffbb00;
+    }
+    .body p{
+        font-size: 18px;
+        text-align: left;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    .about{
+      margin-left:8%;
+      margin-right: 8%;
+    }
+    .about h3{
+      font-family: 'Shadows Into Light', cursive;
+      color: #25282e;
+      font-weight: bolder;
+      font-size: 30px;
+      text-align: left;
+      margin-left: 6%;
+    }
+    .about p{
+      color: #25282e;
+      text-align: center;
+    }
+    .about img{
+      width: 70%;
+      height: 60%;
+    }
+    .second{
+      margin-left: 10%;
+      width: 700px;
+      height: 500px;
+      background-image:url(back3.jpg);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    nav{
+      position: fixed;
+      z-index: 99;
+      width: 100%;
+      background: #242526;
+    }
+    nav .wrapper{
+      position: relative;
+      max-width: 1300px;
+      padding: 0px 30px;
+      height: 70px;
+      line-height: 70px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wrapper .logo a{
+      color: #f2f2f2;
+      font-size: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      position: absolute;
+      top: -10px;
+      left: 40%;
+    	margin-left: 5%;
+    }
+    .wrapper .nav-links{
+      display: inline-flex;
+      width: 100%;
+      transition: .3s;
+    }
+    .wrapper .nav-links li:nth-child(6){
+      margin-left: 200px;
+    }
+    .nav-links li{
+      list-style: none;
+    }
+    .nav-links li a{
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 9px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .nav-links li a:hover{
+      background: #3A3B3C;
+    }
+    .nav-links .mobile-item{
+      display: none;
+    }
+    .nav-links .drop-menu{
+      position: absolute;
+      background: #242526;
+      width: 180px;
+      line-height: 45px;
+      top: 85px;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    }
+    .nav-links li:hover .drop-menu,
+    .nav-links li:hover .mega-box{
+      transition: all 0.3s ease;
+      top: 70px;
+      opacity: 1;
+      visibility: visible;
+    }
+    .drop-menu li a{
+      width: 100%;
+      display: block;
+      padding: 0 0 0 15px;
+      font-weight: 400;
+      border-radius: 0px;
+    }
+    .mega-box{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 0 30px;
+      top: 85px;
+      opacity: 0;
+      visibility: hidden;
+      background: #242526;
+    }
+    .mega-box p{
+      color: #fff;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      shape-margin: 0;
+    }
+    .mega-box .content{
+      background: #242526;
+      padding: 25px 20px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    }
+    .mega-box .content .row{
+      width: calc(25% - 30px);
+      line-height: 45px;
+    }
+    .content .row img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content .row header{
+      color: #f2f2f2;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .content .row .mega-links{
+      margin-left: -40px;
+      border-left: 1px solid rgba(255,255,255,0.09);
+    }
+    .row .mega-links li a{
+      padding: 0px;
+      padding: 0 20px;
+      color: #d9d9d9;
+      font-size: 17px;
+      display: block;
+    }
+    .row .mega-links li a:hover{
+      color: #f2f2f2;
+    }
+    .wrapper .btn{
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+    .wrapper .btn.close-btn{
+      position: absolute;
+      right: 30px;
+      top: 10px;
+    }
+    @media screen and (max-width: 970px) {
+      .wrapper .btn{
+        display: block;
+      }
+      .wrapper .nav-links{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 350px;
+        top: 0;
+        left: -100%;
+        background: #242526;
+        display: block;
+        padding: 50px 10px;
+        line-height: 50px;
+        overflow-y: auto;
+        box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+        transition: all 0.3s ease;
+      }
+      /* custom scroll bar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #242526;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3A3B3C;
+      }
+      #menu-btn:checked ~ .nav-links{
+        left: 0%;
+      }
+      #menu-btn:checked ~ .btn.menu-btn{
+        display: none;
+      }
+      #close-btn:checked ~ .btn.menu-btn{
+        display: block;
+      }
+      .nav-links li{
+        margin: 15px 10px;
+      }
+      .nav-links li a{
+        padding: 0 20px;
+        display: block;
+        font-size: 20px;
+      }
+      .nav-links .drop-menu{
+        position: static;
+        opacity: 1;
+        top: 65px;
+        visibility: visible;
+        padding-left: 20px;
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        box-shadow: none;
+        transition: all 0.3s ease;
+      }
+      #showDrop:checked ~ .drop-menu,
+      #showMega:checked ~ .mega-box{
+        max-height: 100%;
+      }
+      .nav-links .desktop-item{
+        display: none;
+      }
+      .nav-links .mobile-item{
+        display: block;
+        color: #f2f2f2;
+        font-size: 20px;
+        font-weight: 500;
+        padding-left: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      .nav-links .mobile-item:hover{
+        background: #3A3B3C;
+      }
+      .drop-menu li{
+        margin: 0;
+      }
+      .drop-menu li a{
+        border-radius: 5px;
+        font-size: 18px;
+      }
+      .mega-box{
+        position: static;
+        top: 65px;
+        opacity: 1;
+        visibility: visible;
+        padding: 0 20px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      .mega-box .content{
+        box-shadow: none;
+        flex-direction: column;
+        padding: 20px 20px 0 20px;
+      }
+      .mega-box .content .row{
+        width: 100%;
+        margin-bottom: 15px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+      .mega-box .content .row:nth-child(1),
+      .mega-box .content .row:nth-child(2){
+        border-top: 0px;
+      }
+      .content .row .mega-links{
+        border-left: 0px;
+        padding-left: 15px;
+      }
+      .row .mega-links li{
+        margin: 0;
+      }
+      .content .row header{
+        font-size: 19px;
+      }
+    }
+    nav input{
+      display: none;
+    }
+    .body-text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      padding: 0 30px;
+    }
+    .body-text div{
+      font-size: 45px;
+      font-weight: 600;
+    }
+    /*------------------NewsLetter------------------------*/
+    .newsletter{
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      padding-top: 70px;
+      background-image: url(back8.jpg);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+    .newsletter h2{
+      font-size: 40px;
+      color: #fff;
+      font-family: 'Shadows Into Light', cursive;
+    }
+    #text{
+      width: 300px;
+      height: 30px;
+      border: 3px solid #a39190;
+      color: #a39190;
+    }
+    #email{
+      width: 300px;
+      height: 30px;
+      border: 3px solid #a39190;
+      color: #a39190;
+    }
+    ::-webkit-input-placeholder{
+      margin-right: 10px;
+      font-size: 15px;
+      color: #a39190;
+    }
+    /*----------------------Footer--------------------*/
+    .footer{
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      padding-top: 70px;
+      background-image: url(back2.jpg);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+    .footer h4{
+      color: #403c3c;
+      font-size: 20px;
+      font-weight: 300;
+      font-family: 'Shadows Into Light', cursive;
+    }
+    .row5{
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-top: 30px;
+    }
+    .col5{
+      margin-right: 5px;
+      margin-left: 5px;
+      flex: 25%;
+      background: transparent;
+    }
+    .footer h4{
+      font-size: 20px;
+      font-family: 'Shadows Into Light', cursive;
+      color: #403c3c;
+    }
+    .footer ul li{
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+      text-align: left;
+    }
+    .footer ul li a{
+      color: #403c3c;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    .footer ul li::after{
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #754df7;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+    .footer ul li:hover::after{
+      width: 100%;
+    }
+    @media only screen and (max-width: 1000px) {
+      .row5{
+        flex-wrap: wrap;
+      }
+      .footer ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 3px 5px;
+        position: relative;
+        text-align: left;
+      }
+      .footer ul li a{
+        color: #000;
+        text-decoration: none;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+<!---------------Nav Starts------------------->
+<nav>
+  <div class="wrapper">
+    <div class="logo">
+      <a class="navbar-brand" href="index.html">
+        <video autoplay loop muted width="70" height="70">
+           <source src="logo1.mp4" type="video/mp4">
+        </video>
+      </a>
+    </div>
+    <input type="radio" name="slider" id="menu-btn">
+    <input type="radio" name="slider" id="close-btn">
+    <ul class="nav-links">
+      <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+      <li>
+        <a href="#" class="desktop-item" style="font-family: 'Shadows Into Light', cursive;">EXPERIENCE MOKSHAM</a>
+        <input type="checkbox" id="showMega1">
+        <label for="showMega1" class="mobile-item" style="font-weight: bold; color: #cfc9a3;">EXPERIENCE MOKSHAM</label>
+        <div class="mega-box">
+          <div class="content">
+            <div class="row">
+              <img src="img.jpg" alt="">
+            </div>
+            <div class="row">
+              <ul class="mega-links">
+                <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;">Schedule</header>
+                <li><a href="yearly_schedule.html">Yearly Schedule</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <ul class="mega-links">
+                <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;">Events</header>
+                <li><a href="musical.html">Musical Journey</a></li>
+                <li><a href="sweatlodge.html">Sweatlodge</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <ul class="mega-links">
+                <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;">Six Pillars of Moksham</header>
+                <li><a href="meditation.html">Meditation</a></li>
+                <li><a href="emotional_healing.html">Emotional Healing</a></li>
+                <li><a href="physical.html">Physical Rejuvenation</a></li>
+              </ul>
+              <header></header>
+              <ul class="mega-links">
+                <li><a href="red_road.html">Red Road</a></li>
+                <li><a href="eco_village.html">Eco Village</a></li>
+                <li><a href="musical.html">Musical Journeys</a></li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            <em style="font-family: 'Shadows Into Light', cursive;">
+              Moksham holds a variety of Meditation Retreats, Body Cleanse Detox Programs, Emotional Healing workshops,
+              Medicinal Therapies , Yoga , Red Road Ceremonies and Musical Journeys.
+              year-round.
+          </em>
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="desktop-item">VISIT</a>
+        <input type="checkbox" id="showMega2">
+        <label for="showMega2" class="mobile-item" style="font-weight: bold; color: #cfc9a3;">VISIT</label>
+        <div class="mega-box">
+          <div class="content">
+            <div class="row">
+              <img src="nav1.jpg" alt="">
+            </div>
+            <div class="row">
+              <ul class="mega-links">
+                <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;">Staying at Moksham</header>
+                <br>
+                <li><a href="accomodation.html">Accommodation & Rates</a></li>
+                <li><a href="directions.html">How to Get Here</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header><br></header>
+              <ul class="mega-links">
+                <li><a href="testimonial.html">Testimonials</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <ul class="mega-links">
+                <br><br><br>
+                <li>
+                <a href="contact.html">
+                  <button style="background-image: url(but6.png);   background-position: center; background-size: cover;
+                    position: relative; font-weight: bold; width: 100%; font-family: 'Shadows Into Light', cursive; color: ">CONTACT AND BOOK</button>
+                </a>
+              </li>
+                <br><br><br>
+              </ul>
+            </div>
+          </div>
+          <p>
+            <em style="font-family: 'Shadows Into Light', cursive;">
+            Moksham is an oasis for the soul. Dive in, drink and be the inspirational
+            transformation that this wonderful place will lead you to.
+          </em>
+          </p>
+        </div>
+      </li>
+      <li><a href="jungle_shop.html">JUNGLE SHOP</a></li>
+      <li><a href="yearly_schedule.html">SCHEDULE</a></li>
+      <li style="margin-left: 22%">
+        <a href="#" class="desktop-item">WHAT IS MOKSHAM</a>
+        <input type="checkbox" id="showMega3">
+        <label for="showMega3" class="mobile-item" style="margin-left: -24%; font-weight: bold; color: #cfc9a3;">WHAT IS MOKSHAM</label>
+        <div class="mega-box">
+          <div class="content">
+            <div class="row">
+              <img src="nav2.jpg" alt="">
+            </div>
+            <div class="row">
+              <ul class="mega-links">
+                <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;">Life in Moksham</header>
+                <li><a href="about_moksham.html">About Moksham</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="eco_village.html">Eco Village</a></li>
+              </ul>
+              <ul class="mega-links">
+                <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;"></header>
+                <li><a href="team.html">Moksham Family</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <ul class="mega-links">
+                <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;">Food and Health</header>
+                <li><a href="healthy.html">Healthy Eating</a></li>
+                <li><a href="verde.html">Moksham Cafe</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <ul class="mega-links">
+                <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;">6 Pillars of Moksham</header>
+                <li><a href="index.html#six_pillars">Learn More</a></li>
+              </ul>
+              <ul class="mega-links">
+                <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;">Eastern Ghats Forest</header>
+                <li><a href="nature.html">Nature and Wildlife</a></li>
+              </ul>
+            </div>
+          </div>
+          <p>
+           <em style="font-family: 'Shadows Into Light', cursive;">
+            Moksham is a natural sanctuary for the soul; a spiritual
+            eco-community united in the intention to live a life of reverence,
+            meditation and harmony with nature and the elements.
+          </em>
+          </p>
+        </div>
+      </li>
+      <li><a href="workexchange.html">WORK EXCHANGE/LONG TERM STAY</a></li>
+      <li>
+        <a href="#" class="desktop-item">YOGA</a>
+        <input type="checkbox" id="showMega4">
+        <label for="showMega4" class="mobile-item" style="font-weight: bold; color: #cfc9a3;">YOGA</label>
+        <div class="mega-box">
+          <div class="content">
+            <div class="row">
+              <img src="nav3.jpg" alt="">
+            </div>
+            <div class="row">
+              <ul class="mega-links">
+                <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;">Trainings</header>
+                <li><a href="yoga.html">Yoga in Moksham</a></li>
+                <li><a href="intense.html">Yoga Intense Training</a></li>
+                <li><a href="resyoga.html">Restorative Yoga and Self-Exploration Training</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <ul class="mega-links">
+                <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;">Workshops</header>
+                <li><a href="subtle_body.html">The Subtle Body</a></li>
+                <li><a href="vinyasa.html">Vinyasa Yoga Intensive</a></li>
+                <li><a href="cyclic.html">Psychic Journey</a></li>
+                <li><a href="movement.html">Ecstatic Movement,Breath and Restorative Yoga</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <ul class="mega-links">
+                <br>
+                <li><a href="self.html">Self Myofascial Release and Yin Yoga</a></li>
+                <li><a href="holistic.html">Body Work - Holistic Massage</a></li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            <em style="font-family: 'Shadows Into Light', cursive;">
+            A unique, non-dogmatic approach to yoga has developed in Moksham.
+            Some of the paths and traditions explored include Yin , Vinyasa , Inversion
+            and Calligraphy Yoga.
+            </em>
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="desktop-item" style="font-weight: bold; color: #cfc9a3;">DETOX</a>
+        <input type="checkbox" id="showMega5">
+        <label for="showMega5" class="mobile-item" style="font-weight: bold; color: #cfc9a3;">DETOX</label>
+        <div class="mega-box">
+          <div class="content">
+            <div class="row">
+              <img src="nav4.jpg" alt="">
+            </div>
+            <div class="row">
+              <header style="font-family: 'Shadows Into Light', cursive; font-weight: bolder;">Detox Retreats</header>
+              <ul class="mega-links">
+                <li><a href="cleanse.html">Cleanse in Moksham</a></li>
+                <li><a href="detox.html">Body Cleanse Detox Program</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <header><br></header>
+              <ul class="mega-links">
+              </ul>
+            </div>
+          </div>
+          <p>
+            <em style="font-family: 'Shadows Into Light', cursive;">
+            Cleansing the body of physical layers of toxins offers a fresh
+            beginning.This reset brings replenished energy, vitality, and
+            invites a deep new appreciation and connection to the body.
+          </em>
+          </p>
+        </div>
+      </li>
+    </ul>
+    <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+  </div>
+</nav>
+<!----------------Nav Ends------------------->
+<!-----------------Body Starts----------------->
+<body>
+  <section class="level">
+      <img src="back9.jpg"  style="width: 100%; height: 80px;">
+  </section>
+  <section class="img">
+    <img src="pic1.jpg"  style="width: 100%;">
+  </section>
+  <section class="level" style="height: 10px;  background-image: url(back9.jpg); background-position: center; background-size: cover; position: relative;">
+      <img src="back9.jpg"  style="width: 100%; height: 10px;">
+  </section>
+  <section class="body">
+    <br><br><br>
+    <h2>VISITING YOUTH</h2>
+    <br><br>
+    <center>
+      <iframe width="800" height="450" src="https://www.youtube.com/embed/DqLAwF7rOp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
+    <br><br><br>
+    <center>
+    <p style="text-align: center; ">
+      Visiting youth of all ages and their families are welcomed every year in Moksham. The Village is fit to accommodate a family’s needs and resident children are always happy to make new friends. Children are an integral part of the PachaMama Community, and have been almost from its inception. PachaMama offers children the opportunity to be immersed in nature, explore the forest, and tune into its magical rhythm.
+      <br>
+      The school is located in the beautiful forest of PachaMama Eco Village. The Visiting Kids program is integrated in the school, operates Mon-Fri 8am-1pm, and includes fresh organic vegetarian snacks and lunch. The visiting children have their own teacher who guides them through different activities like arts and crafts, story time, nature walks, outdoor activities, and more. The program is kept in the spirit of the community: simplicity, ecology, and harmony with nature. The flow of the day depends on the number of kids visiting at the time, and on their ages. Some of the activities are integrated with the local Moksham kids.
+    </p>
+    <br><br>
+    <em>
+      Family FAQ
+    </em>
+  </center>
+  <br>
+  <div class="about">
+    <div class="one">
+      <h5>What should I pack for my family?</h5>
+      <p>
+        Clothes: The weather in PachaMama is usually warm year-round. Make sure you pack lots of light, short clothes, as well as a few warmer options for the occasional chilly evening. For visits to the river or beach, swimwear and a lungi (sarong). Flip-flops or sandals are the most practical choice. Rubber boots are recommended during the rainy season (May-November).
+        <br>
+        It is advisable to also bring one or more sets of white clothes.
+        <br>
+        Diapers: Parents of diaper-wearing children, please bring eco-friendly, biodegradable diapers or cloth diapers. PachaMama is an eco-community, aspiring to minimize its impact on the environment as much as possible. Please be mindful of this while you pack and plan your trip.
+        <br>
+        Parents are encouraged to bring books, games, and whatever their children like to play with when home.
+        <br>
+        Mosquito repellent and biodegradable hygiene products can be bought in the village shop, as well as in the nearby villages.
+      </p>
+    </div>
+    <br><br>
+    <center>
+    <button type="button" class="btn btn-secondary btn-lg" style="background-color: #1a1c24;">CONTACT & BOOK</button>
+    </center>
+    <br><br>
+  </div>
+  </section>
+  <section class="level">
+      <img src="back9.jpg"  style="width: 100%; height: 30px;">
+  </section>
+</body>
+<!-----------------Body Ends----------------->
+<!------------------------Newsletter Starts---------------------------->
+<section class="newsletter">
+  <h2>Subscribe To The Newsletter</h2>
+  <br><br>
+  <form action="/action_page.php">
+    <label for="text">
+      <input type="text" id="text" name="text" maxlength="50" size="40" placeholder="Your Name">
+    </label>
+    <label for="email">
+      <input type="text" id="email" name="email" maxlength="50" size="40" placeholder="Email Address" style="margin-left: 20px;">
+    </label>
+    <br><br>
+    <button type="button" class="btn btn-dark" style=" font-family: 'Shadows Into Light', cursive;">SUBMIT</button>
+  </form>
+  <br>
+<!------------------------Newsletter Ends---------------------------->
+<!------------------------Footer Starts----------------------------->
+<footer class="footer">
+  <div class="row5">
+    <div class="col4">
+      <h4>ABOUT MOKSHAM</h4>
+      <br>
+      <ul>
+        <li><a href="about_moksham.html">About Moksham</a></li><br>
+        <li><a href="community.html">Community</a></li><br>
+        <li><a href="healthy.html">Healthy Eating</a></li><br>
+        <li><a href="eco_village.html">Eco Village</a></li><br>
+        <li><a href="silent.html">Silent Retreats</a></li><br>
+      </ul>
+    </div>
+    <div class="col4">
+      <h4>GROUPS AND EVENTS</h4>
+      <br>
+      <ul>
+        <li><a href="yearly_schedule.html">Schedule 2021</a></li><br>
+        <li><a href="holistic.html">Body Workshops</a></li><br>
+      </ul>
+    </div>
+    <div class="col4">
+      <h4>VISITING MOKSHAM</h4>
+      <ul>
+        <li><a href="accomodation.html">Accomodation & Prices</a></li><br>
+        <li><a href="workexchange.html">Long Term Stay- WorkExchange Program</a></li><br>
+        <li><a href="faq.html">FAQ</a></li><br>
+        <li><a href="directions.html">How to Get Here</a></li><br>
+        <li><a href="contact.html">Booking</a></li><br>
+        <li><a href="cancle.html">Cancellation Policy</a></li><br>
+        <li><a href="testimonial.html">Testimonials</a></li><br>
+        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=enquiry@moksham.co.in&su=SUBJECT&body=BODY&bcc=enquiry@moksham.co.in">Contact Us: enquiry@moksham.co.in</a></li><br><br>
+      </ul>
+    </div>
+    <div class="col4">
+      <br>
+      <ul>
+        <a href="contact.html"><button id="button"><b>CONTACT<br>US<b></button></a>
+        <br><br><br>
+        <a href="https://www.facebook.com/profile.php?id=100070487028921"><img src="fb.png" style="width: 17%;"></a>
+        <a href="https://www.instagram.com/moksham_ecovillage/"><img src="insta.png" style="width: 15%;"></a>
+      </ul>
+    </div>
+    </div>
+  </div>
+</footer>
+</section>
+<!------------------------Footer Ends----------------------------->
+</html>
