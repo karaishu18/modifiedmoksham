@@ -424,7 +424,7 @@ body { font-family: sans-serif; }
 .col4{
   margin-left: 65px;
   margin-right: 50px;
-  flex: 33.33%;
+  flex: 30%;
   background: transparent;
   transition: 0.5s;
   cursor: pointer;
