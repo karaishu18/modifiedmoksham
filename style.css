@@ -303,6 +303,7 @@ nav input{
   font-size: 45px;
   font-weight: 600;
 }
+
 /*-----------------Objective------------------*/
 .about1{
   background-image: url(back3.jpg);
@@ -330,14 +331,12 @@ nav input{
   color: #cfc9a3;
 }
 .col1 p{
-  margin-top: 5%;
   font-size: 20px;
   font-family: 'Benne', serif;
   color: #cfc9a3;
 }
 .col1 img{
-  margin-top: -15%;
-  margin-right: 80%;
+  margin-top: -18%;
   width: 600px;
 }
 
